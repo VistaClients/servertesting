@@ -7,5 +7,4 @@ window.addEventListener("message", (event) => {
         localStorage.setItem("repo_name", event.data.repo_name);
         document.getElementById("output").textContent = "Received message: " + JSON.stringify(event.data);
         event.source.postMessage({ reply: "Got your message!" }, event.origin);
-
       });
